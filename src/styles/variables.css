@@ -1,0 +1,71 @@
+.headingXLarge {
+    font-family: 'poppins', system-ui, sans-serif;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.headingLarge {
+    font-family: 'poppins', system-ui, sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.headingMedium {
+    font-family: 'poppins', system-ui, sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.headingSmall {
+    font-family: 'poppins', system-ui, sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.headingXSmall {
+    font-family: 'poppins', system-ui, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.textLarge {
+    font-family: 'lato', system-ui, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+.textMedium {
+    font-family: 'lato', system-ui, sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.textSmall {
+    font-family: 'lato', system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.textXSmall {
+    font-family: 'lato', system-ui, sans-serif;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 1rem;
+}
