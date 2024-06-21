@@ -1,0 +1,49 @@
+---
+import Logotipo from '../Logotipo.astro'
+---
+
+<section class="header">
+    <Logotipo mode='dark' />
+    <nav class="navbar textXLarge">
+        <a href="/noticias">Noticias</a>
+        <a href="/eventos">Eventos</a>
+        <a href="/turismo">Turismo</a>
+        <a href="/servicios-online">Servicios Online</a>
+    </nav>
+</section>
+
+<style>
+    .header {
+        display: flex;
+        position: sticky;
+        top: 0;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 3rem;
+        background-color: var(--green);
+    }
+
+    .navbar {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .navbar a {
+        color: var(--white);
+        text-decoration: none;
+    }
+
+    .navbar a:hover {
+        opacity: 0.8;
+    }
+
+    .navbar a:active {
+        opacity: 0.5;
+    }
+
+    @media screen and (max-width: 768px){
+        .navbar {
+            font-size: 1rem;
+        }
+    }
+</style>
