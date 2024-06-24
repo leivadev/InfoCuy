@@ -1,0 +1,92 @@
+---
+import Logotipo from "../Logotipo.astro";
+import ArrowUp from "../icons/ArrowUp.astro";
+let year = new Date().getFullYear().toString();
+---
+
+<footer>
+    <div class="upper-footer">
+        <div class="footer-column">
+            <nav>
+                <h2 class="headingSmall footer-subtitle">Acerca de</h2>
+                <a href="" class="textLarge">Nosotros</a>
+                <a href="" class="textLarge">Misión y Visión</a>
+                <a href="" class="textLarge">Preguntas Frecuentes</a>
+                <a href="" class="textLarge">Enviar Feedback</a>
+            </nav>
+        </div>
+        <div class="footer-column">
+            <nav>
+                <h2 class="headingSmall footer-subtitle">Recursos</h2>
+                <a href="" class="textLarge">Reportes</a>
+                <a href="" class="textLarge">Condiciones de uso</a>
+                <a href="" class="textLarge">Política de Privacidad</a>
+                <a href="" class="textLarge">Contribuye con nosotros</a>
+            </nav>
+        </div>
+        <div class="footer-column">
+            <nav>
+                <h2 class="headingSmall footer-subtitle">Conecta con nosotros</h2>
+                <a href="" class="textLarge">twitter.com/infocuy</a>
+                <a href="" class="textLarge">instagram.com/infocuy.pty</a>
+                <a href="" class="textLarge">youtube.com/@infocuy</a>
+            </nav>
+        </div>
+        <a href="#" class="scrollTop">
+            <ArrowUp/>
+        </a>
+    </div>
+    <hr class="divider-line">
+    <div class="down-footer">
+        <Logotipo mode="dark"/>
+        <p class="textLarge">© Copyright. Todos los derechos reservados InfoCuy {year}.</p>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background: var(--green-gradient);
+        color: var(--white);
+        padding: 2.5rem 4rem;
+    }
+
+    .upper-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0 7.5rem;
+    }
+
+    .down-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .divider-line {
+        color: var(--dark-gray);
+        stroke-width: 0.5px;
+        margin: 2rem 0;
+    }
+
+    .footer-column {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .footer-column nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .footer-subtitle {
+        margin-bottom: 1rem;
+    }
+
+    .down-footer p {
+        color: var(--gray);
+    }
+</style>
