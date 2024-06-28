@@ -2,25 +2,29 @@
 import Logotipo from '../Logotipo.astro'
 ---
 
-<section class="header">
-    <Logotipo mode='dark' />
+<header>
+    <a href="/">
+        <Logotipo mode='dark' />
+    </a>
     <nav class="navbar textXLarge">
         <a href="/noticias">Noticias</a>
         <a href="/eventos">Eventos</a>
         <a href="/turismo">Turismo</a>
-        <a href="/servicios-online">Servicios Online</a>
+        <a href="/servicios">Servicios</a>
     </nav>
-</section>
+</header>
 
 <style>
-    .header {
+    header {
         display: flex;
         position: sticky;
+        z-index: 30;
         top: 0;
         justify-content: space-between;
         align-items: center;
         padding: 1.5rem 3rem;
         background-color: var(--green);
+        border-bottom: 1px solid #1d685f;
     }
 
     .navbar {
@@ -30,11 +34,12 @@ import Logotipo from '../Logotipo.astro'
 
     .navbar a {
         color: var(--white);
-        text-decoration: none;
     }
 
     .navbar a:hover {
         opacity: 0.8;
+        color: #a6e9d9;
+        transition: .3s;
     }
 
     .navbar a:active {
