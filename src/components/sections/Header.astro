@@ -3,7 +3,8 @@ import Logotipo from '../Logotipo.astro'
 ---
 
 <header>
-    <a href="/">
+    <a href="/" class="link-logo">
+        <img src="InfoCuyLogo-white.svg" alt="infocuy logo" width="50rem">
         <Logotipo mode='dark' />
     </a>
     <nav class="navbar textXLarge">
@@ -25,6 +26,12 @@ import Logotipo from '../Logotipo.astro'
         padding: 1.5rem 3rem;
         background-color: var(--green);
         border-bottom: 1px solid #1d685f;
+    }
+
+    .link-logo {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
     }
 
     .navbar {
