@@ -5,36 +5,36 @@ let year = new Date().getFullYear().toString();
 ---
 
 <footer>
-    <div class="upper-footer">
+    <div class="upper-footer textLarge">
         <div class="footer-column">
-            <nav>
-                <h2 class="headingSmall footer-subtitle">Acerca de</h2>
-                <a href="" class="textLarge">Nosotros</a>
-                <a href="" class="textLarge">Misión y Visión</a>
-                <a href="" class="textLarge">Preguntas Frecuentes</a>
-                <a href="" class="textLarge">Enviar Feedback</a>
+            <h2 class="headingSmall footer-subtitle">Acerca de</h2>
+            <nav class="navbar">
+                <a href="">Nosotros</a>
+                <a href="">Misión y Visión</a>
+                <a href="">Preguntas Frecuentes</a>
+                <a href="">Enviar Feedback</a>
             </nav>
         </div>
         <div class="footer-column">
-            <nav>
-                <h2 class="headingSmall footer-subtitle">Recursos</h2>
-                <a href="" class="textLarge">Reportes</a>
-                <a href="" class="textLarge">Condiciones de uso</a>
-                <a href="" class="textLarge">Política de Privacidad</a>
-                <a href="" class="textLarge">Contribuye con nosotros</a>
+            <h2 class="headingSmall footer-subtitle">Recursos</h2>
+            <nav class="navbar">
+                <a href="">Reportes</a>
+                <a href="">Condiciones de uso</a>
+                <a href="">Política de Privacidad</a>
+                <a href="">Contribuye con nosotros</a>
             </nav>
         </div>
         <div class="footer-column">
-            <nav>
-                <h2 class="headingSmall footer-subtitle">Conecta con nosotros</h2>
-                <a href="" class="textLarge">twitter.com/infocuy</a>
-                <a href="" class="textLarge">instagram.com/infocuy.pty</a>
-                <a href="" class="textLarge">youtube.com/@infocuy</a>
+            <h2 class="headingSmall footer-subtitle">Conecta con nosotros</h2>
+            <nav class="navbar">
+                <a href="">twitter.com/infocuy</a>
+                <a href="">instagram.com/infocuy.pty</a>
+                <a href="">youtube.com/@infocuy</a>
             </nav>
         </div>
-        <a href="#" class="scrollTop">
+        <button class="scrollTop" id="scrollButton">
             <ArrowUp/>
-        </a>
+        </button>
     </div>
     <hr class="divider-line">
     <div class="down-footer">
@@ -42,6 +42,15 @@ let year = new Date().getFullYear().toString();
         <p class="textLarge">© Copyright. Todos los derechos reservados InfoCuy {year}.</p>
     </div>
 </footer>
+
+<script>
+const scrollButton = document.getElementById('scrollButton');
+if (scrollButton) {
+    scrollButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+</script>
 
 <style>
     footer {
@@ -51,10 +60,10 @@ let year = new Date().getFullYear().toString();
     }
 
     .upper-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin: 0 7.5rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        justify-items: center;
     }
 
     .down-footer {
@@ -72,21 +81,58 @@ let year = new Date().getFullYear().toString();
 
     .footer-column {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 1rem;
     }
 
-    .footer-column nav {
+    .navbar {
         display: flex;
         flex-direction: column;
         gap: 0.25rem;
     }
 
-    .footer-subtitle {
-        margin-bottom: 1rem;
+    .navbar a {
+        color: var(--white);
+    }
+
+    .navbar a:hover {
+        color: #a6e9d9;
+        opacity: 0.8;
+        transition: .3s;
+    }
+
+    .navbar a:active {
+        opacity: 0.5;
+    }
+
+    .scrollTop {
+        align-self: center;
     }
 
     .down-footer p {
         color: var(--gray);
+    }
+
+    @media (max-width: 768px) {
+        footer {
+            padding: 2.5rem 2rem;
+        }
+
+        .upper-footer {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-subtitle {
+            align-self: self-start;
+        }
+
+        .footer-column {
+            align-items: center;
+        }
+
+        .navbar {
+            gap: 0.5rem;
+        }
     }
 </style>
