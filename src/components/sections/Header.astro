@@ -3,27 +3,27 @@ import Logotipo from '../Logotipo.astro'
 ---
 
 <header>
-    <a href="/" class="link-logo">
-        <img src="InfoCuyLogo-white.svg" alt="infocuy logo" width="50rem">
-        <Logotipo mode='dark' />
-    </a>
-    <nav class="navbar textXLarge">
-        <a href="/noticias">Noticias</a>
-        <a href="/eventos">Eventos</a>
-        <a href="/turismo">Turismo</a>
-        <a href="/servicios">Servicios</a>
-    </nav>
+    <div class="header-wrapper container">
+        <a href="/" class="link-logo">
+            <img src="InfoCuyLogo-white.svg" alt="infocuy logo" width="50rem">
+            <Logotipo mode='dark' />
+        </a>
+        <nav class="navbar textXLarge">
+            <a href="/noticias">Noticias</a>
+            <a href="/eventos">Eventos</a>
+            <a href="/turismo">Turismo</a>
+            <a href="/servicios">Servicios</a>
+        </nav>
+    </div>
 </header>
 
 <style>
     header {
         display: flex;
         position: sticky;
-        z-index: 30;
+        z-index: 999;
         top: 0;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.5rem 3rem;
+        padding: 1.5rem 0;
         background-color: var(--green);
         border-bottom: 1px solid #1d685f;
     }
@@ -31,6 +31,12 @@ import Logotipo from '../Logotipo.astro'
     .link-logo {
         display: flex;
         gap: 0.5rem;
+        align-items: center;
+    }
+
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
     }
 

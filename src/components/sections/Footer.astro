@@ -5,41 +5,43 @@ let year = new Date().getFullYear().toString();
 ---
 
 <footer>
-    <div class="upper-footer textLarge">
-        <div class="footer-column">
-            <h2 class="headingSmall footer-subtitle">Acerca de</h2>
-            <nav class="navbar">
-                <a href="">Nosotros</a>
-                <a href="">Misión y Visión</a>
-                <a href="">Preguntas Frecuentes</a>
-                <a href="">Enviar Feedback</a>
-            </nav>
+    <div class="footer-wrapper container">
+        <div class="upper-footer textLarge">
+            <div class="footer-column">
+                <h2 class="headingSmall footer-subtitle">Acerca de</h2>
+                <nav class="navbar">
+                    <a href="">Nosotros</a>
+                    <a href="">Misión y Visión</a>
+                    <a href="">Preguntas Frecuentes</a>
+                    <a href="">Enviar Feedback</a>
+                </nav>
+            </div>
+            <div class="footer-column">
+                <h2 class="headingSmall footer-subtitle">Recursos</h2>
+                <nav class="navbar">
+                    <a href="">Reportes</a>
+                    <a href="">Condiciones de uso</a>
+                    <a href="">Política de Privacidad</a>
+                    <a href="">Contribuye con nosotros</a>
+                </nav>
+            </div>
+            <div class="footer-column">
+                <h2 class="headingSmall footer-subtitle">Conecta con nosotros</h2>
+                <nav class="navbar">
+                    <a href="">twitter.com/infocuy</a>
+                    <a href="">instagram.com/infocuy.pty</a>
+                    <a href="">youtube.com/@infocuy</a>
+                </nav>
+            </div>
+            <button class="scrollTop" id="scrollButton">
+                <ArrowUp/>
+            </button>
         </div>
-        <div class="footer-column">
-            <h2 class="headingSmall footer-subtitle">Recursos</h2>
-            <nav class="navbar">
-                <a href="">Reportes</a>
-                <a href="">Condiciones de uso</a>
-                <a href="">Política de Privacidad</a>
-                <a href="">Contribuye con nosotros</a>
-            </nav>
+        <hr class="divider-line">
+        <div class="down-footer">
+            <Logotipo mode="dark"/>
+            <p class="textLarge">© Copyright. Todos los derechos reservados InfoCuy {year}.</p>
         </div>
-        <div class="footer-column">
-            <h2 class="headingSmall footer-subtitle">Conecta con nosotros</h2>
-            <nav class="navbar">
-                <a href="">twitter.com/infocuy</a>
-                <a href="">instagram.com/infocuy.pty</a>
-                <a href="">youtube.com/@infocuy</a>
-            </nav>
-        </div>
-        <button class="scrollTop" id="scrollButton">
-            <ArrowUp/>
-        </button>
-    </div>
-    <hr class="divider-line">
-    <div class="down-footer">
-        <Logotipo mode="dark"/>
-        <p class="textLarge">© Copyright. Todos los derechos reservados InfoCuy {year}.</p>
     </div>
 </footer>
 
