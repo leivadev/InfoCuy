@@ -7,9 +7,12 @@ import Card from '@/components/Card.astro';
 <Layout title="Home | InfoCuy">
 	<main>
 		<section class="hero">
-			<h1 class="welcome-message headingXLarge">Conoce todo sobre Chiriquí!</h1>
+			<div class="hero-wrapper container">
+				<h1 class="welcome-message headingXLarge">Conoce todo sobre Chiriquí!</h1>
+				<Card title="Noticias" body="Entérate de las últimas noticias de la provincia de Chiriquí." href="/noticias" />
+			</div>
 		</section>
-		<section class="inicio">
+		<section class="inicio container">
 			<li class="card-list">
 				<Card
 					title="Vacantes de Trabajo"
@@ -42,24 +45,30 @@ import Card from '@/components/Card.astro';
 
 <style>
 	.hero {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		display: flex;
+		justify-content: center;
 		align-items: center;
 		background-image: url('/home/Hero-Chiriqui.webp');
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-		min-height: 50vh;
+		min-height: 30rem;
+	}
+
+	.hero-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	.welcome-message {
 		color: var(--white);
-		text-align: center;
+		text-align: left;
 	}
 
 	.inicio {
 		display: grid;
-		grid-template-columns: 1fr 2fr;
+		grid-template-columns: 35rem 1fr;
 		gap: 2rem;
 		padding: 2rem;
 	}
