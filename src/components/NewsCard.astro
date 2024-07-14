@@ -1,0 +1,102 @@
+---
+interface Props {
+    id: string;
+    title: string;
+    content: string;
+    photo?: string;
+    publicationDate: string;
+    tags: string[];
+    author: string;
+    authorPhoto: string;
+}
+
+const {id, title, content, photo, publicationDate, tags, author, authorPhoto} = Astro.props;
+---
+
+<article class=`local-news-id-${id}`>
+    <h2 class="news-title headingLarge">{title}</h2>
+    <div class="photo-container">
+        <img src=`${photo}` onerror="this.src ='news/No-Image-Placeholder.png';" alt=`Photo container - ${title}`>
+    </div>
+    <div class="news-info">
+        <div class="author-container">
+            <img src=`${authorPhoto}` alt=`${author}` class="author-photo">
+            <h3 class="author-name headingXSmall">{author}</p>
+            </div>
+            <p class="news-date textLarge">Publicado: {publicationDate}</p>
+            <div class="tags-container headingXSmall">
+            {tags.map(tag => (
+                <span class="tag">{tag}</span>
+            ))}
+        </div>
+    </div>
+    <p class="news-content textLarge">{content}</p>
+</article>
+
+<style>
+    article {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        padding: 0.5rem;
+        max-width: 100ch;
+        box-shadow: var(--blur16px);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        color: var(--black);
+    }
+
+    .news-title {
+        padding-bottom: 1.5rem;
+    }
+
+    .photo-container {
+        height: 30rem;
+        width: 100%;
+        padding-bottom: 1.5rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+    }
+
+    .photo-container>img {
+        position: absolute;
+        width: 100%;
+    }
+
+    .news-info {
+        display: flex;
+        flex-direction: column;
+        margin: 0.5rem 0;
+        gap: 0.5rem;
+    }
+
+    .tags-container {
+        display: flex;
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    .tag {
+        padding: 0.5rem;
+        background-color: #f0f0f0;
+        border-radius: 0.5rem;
+    }
+
+    .news-content {
+        margin: 1rem 0;
+        line-height: 2.5;
+    }
+
+    .author-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .author-photo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+    }
+</style>
